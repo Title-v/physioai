@@ -1,0 +1,221 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram id="physioai-flow" name="PhysioAI Flow Canvas">
+    <mxGraphModel dx="2852" dy="1824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=36;fontStyle=1;fontColor=#1F4E79;" value="PhysioAI — System Flow Canvas" vertex="1">
+          <mxGeometry height="44" width="880" x="510" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;fontColor=#64748B;" value="ระบบกายภาพบำบัดอัจฉริยะ · End-to-End Flow · Inclusive Accessibility Modes" vertex="1">
+          <mxGeometry height="22" width="1000" x="450" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="L1-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#94A3B8;letterSpacing=2;" value="LAYER 1 · USERS" vertex="1">
+          <mxGeometry height="20" width="200" x="850" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="user-therapist" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#EF4444;fontSize=18;fontColor=#7F1D1D;" value="&lt;b&gt;นักกายภาพบำบัด (Therapist)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(100, 116, 139);&quot;&gt;Setup ท่า · บันทึก Reference Pose · ติดตาม Progress&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="420" x="350" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="user-patient" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontSize=18;fontColor=#1E3A8A;" value="&lt;b&gt;ผู้ป่วย · ผู้พิการ (Patient) — รวม 1.77M คน&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(100, 116, 139);&quot;&gt;ฝึกที่บ้านจากมือถือ · เลือก Mode ตามลักษณะความพิการ&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="420" x="1130" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="L2-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#94A3B8;letterSpacing=2;" value="LAYER 2 · ENTRY POINTS (3 MODES)" vertex="1">
+          <mxGeometry height="20" width="400" x="750" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="mode1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#EF4444;fontSize=18;fontColor=#7F1D1D;" value="&lt;b&gt;โหมด 1 — Therapist Setup&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(100, 116, 139);&quot;&gt;ถ่ายวิดีโอสาธิต → บันทึก 33 Landmarks&lt;br&gt;เป็น Reference Pose + Threshold + Reps&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="380" x="150" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="mode2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#3B82F6;fontSize=18;fontColor=#1E3A8A;" value="&lt;b&gt;โหมด 2 — Patient Practice&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(100, 116, 139);&quot;&gt;เปิดแอป → เลือกท่า → กล้องจับ Pose&lt;br&gt;Real-time พร้อม Skeleton Overlay&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="380" x="760" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="mode3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#EF4444;fontSize=18;fontColor=#7F1D1D;" value="&lt;b&gt;โหมด 3 — Therapist Dashboard&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(100, 116, 139);&quot;&gt;ดู Progress รายวัน/สัปดาห์ · Alert&lt;br&gt;ท่าผิดบ่อย · ปรับแผนการรักษา&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="380" x="1370" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="L3-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#94A3B8;letterSpacing=2;" value="LAYER 3 · AI PIPELINE (ON-DEVICE · NO CLOUD)" vertex="1">
+          <mxGeometry height="20" width="600" x="650" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#10B981;dashed=1;opacity=30;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="140" width="1680" x="110" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#10B981;fontSize=18;fontColor=#064E3B;" value="&lt;b&gt;&amp;nbsp;Step 1&lt;/b&gt;&lt;br&gt;&lt;b&gt;Camera Frame&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(6, 78, 59);&quot;&gt;จับภาพ Real-time&lt;br&gt;จากมือถือ&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="360" x="150" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#10B981;fontSize=18;fontColor=#064E3B;" value="&lt;b&gt;Step 2&lt;/b&gt;&lt;br&gt;&lt;b&gt;MediaPipe BlazePose&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(6, 78, 59);&quot;&gt;CNN-based Pose Estimation&lt;br&gt;→ ดึง 33 Landmark Points (3D)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="360" x="570" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#10B981;fontSize=18;fontColor=#064E3B;" value="&lt;b&gt;Step 3&lt;/b&gt;&lt;br&gt;&lt;b&gt;Joint Angle Calculation&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(6, 78, 59);&quot;&gt;Inverse Trigonometry (atan2)&lt;br&gt;+ Cosine Similarity&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="360" x="990" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#10B981;fontSize=18;fontColor=#064E3B;" value="&lt;b&gt;Step 4&lt;/b&gt;&lt;br&gt;&lt;b&gt;Compare vs Reference&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(6, 78, 59);&quot;&gt;Threshold 15° · DTW&lt;br&gt;สำหรับ Movement Sequence&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="360" x="1410" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="feedback-engine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;fontSize=18;fontStyle=1;fontColor=#78350F;" value="&lt;b&gt;Feedback Engine&lt;/b&gt; — แยกผลลัพธ์ตามความพิการของผู้ใช้ → เลือก Output Channel" vertex="1">
+          <mxGeometry height="60" width="880" x="510" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="L4-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#94A3B8;letterSpacing=2;" value="LAYER 4 · FEEDBACK MODES (INCLUSIVE DESIGN)" vertex="1">
+          <mxGeometry height="20" width="600" x="650" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="fb-std" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#F59E0B;fontSize=18;fontColor=#78350F;" value="&lt;b&gt;Standard Mode&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(120, 53, 15);&quot;&gt;ผู้พิการทางร่างกาย (1.16M)&lt;/span&gt;&lt;br&gt;&lt;br&gt;TTS เสียงภาษาไทย&lt;br&gt;+ Skeleton Overlay&lt;br&gt;ครบทุกช่องทาง" vertex="1">
+          <mxGeometry height="160" width="380" x="150" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="fb-audio" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#A855F7;fontSize=18;fontColor=#581C87;" value="&lt;b&gt;โหมด 4 · Audio-Only&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(88, 28, 135);&quot;&gt;ผู้พิการทางการเห็น (168K)&lt;/span&gt;&lt;br&gt;&lt;br&gt;TTS บรรยายท่า&lt;br&gt;+ Countdown เสียง&lt;br&gt;+ Alert เสียง — ไม่ต้องมองจอ" vertex="1">
+          <mxGeometry height="160" width="380" x="760" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="fb-visual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#EC4899;fontSize=18;fontColor=#831843;" value="&lt;b&gt;โหมด 5 · Visual-Only&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(131, 24, 67);&quot;&gt;ผู้พิการทางการได้ยิน (441K)&lt;/span&gt;&lt;br&gt;&lt;br&gt;ลูกศร Overlay · สี Skeleton&lt;br&gt;+ ข้อความใหญ่&lt;br&gt;+ Vibration — ไม่ต้องพึ่งเสียง" vertex="1">
+          <mxGeometry height="160" width="380" x="1370" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="L5-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#94A3B8;letterSpacing=2;" value="LAYER 5 · BACKEND &amp;amp; DATA" vertex="1">
+          <mxGeometry height="20" width="360" x="770" y="1125" as="geometry" />
+        </mxCell>
+        <mxCell id="be-api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#64748B;fontSize=18;fontColor=#0F172A;" value="&lt;b&gt;Node.js + Express&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(30, 41, 59);&quot;&gt;REST API + Socket.io&lt;br&gt;Real-time Patient ↔ Therapist&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="380" x="150" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="be-db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#64748B;fontSize=18;fontColor=#0F172A;" value="&lt;b&gt;PostgreSQL + Redis&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(30, 41, 59);&quot;&gt;User Profiles · Sessions · Reference Poses&lt;br&gt;Exercise Library · Cache&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="380" x="760" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="be-auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#64748B;fontSize=18;fontColor=#0F172A;" value="&lt;b&gt;Firebase Auth&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(30, 41, 59);&quot;&gt;User Authentication&lt;br&gt;Role-based Access (Therapist / Patient)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="380" x="1370" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="loop-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#6366F1;dashed=1;fontSize=18;fontColor=#312E81;" value="&lt;b&gt;Feedback Loop:&lt;/b&gt; Session Data → PostgreSQL → Dashboard Analytics → Therapist ปรับแผน → ส่งท่าใหม่ให้ Patient" vertex="1">
+          <mxGeometry height="50" width="1280" x="310" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#94A3B8;letterSpacing=2;" value="TECH STACK · ALL OPEN SOURCE · ON-DEVICE AI" vertex="1">
+          <mxGeometry height="20" width="520" x="690" y="1425" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="240" width="1680" x="110" y="1455" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Mobile&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;React Native + Expo&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="150" y="1485" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Dashboard&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;React + Recharts&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="490" y="1485" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Pose AI&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;MediaPipe BlazePose&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="830" y="1485" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Math&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;Joint Angle + DTW&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="1170" y="1485" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;TTS&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;Web Speech API (TH)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="260" x="1510" y="1485" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Backend&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;Node.js + Express&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="150" y="1585" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Realtime&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;Socket.io&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="490" y="1585" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Database&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;PostgreSQL + Redis&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="830" y="1585" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Auth&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;Firebase Auth&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="1170" y="1585" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=18;fontColor=#0F172A;" value="&lt;b style=&quot;color:#0F172A;&quot;&gt;Haptic&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#334155;&quot;&gt;Vibration API&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="260" x="1510" y="1585" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="user-therapist" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EF4444;strokeWidth=2;endArrow=classic;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="mode1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="user-therapist" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EF4444;strokeWidth=2;endArrow=classic;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="mode3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="270" />
+              <mxPoint x="1560" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="user-patient" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3B82F6;strokeWidth=2;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="mode2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1340" y="270" />
+              <mxPoint x="950" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="mode2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3B82F6;strokeWidth=2;endArrow=classic;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="ai-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="485" />
+              <mxPoint x="330" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="ai-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#10B981;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=18;" target="ai-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="ai-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#10B981;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=18;" target="ai-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="ai-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#10B981;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=18;" target="ai-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="mode1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EF4444;strokeWidth=1.5;dashed=1;endArrow=classic;fontSize=18;fontColor=#7F1D1D;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;" target="ai-4" value="Reference Pose">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="390" />
+              <mxPoint x="550" y="450" />
+              <mxPoint x="1590" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="ai-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#F59E0B;strokeWidth=2.5;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=18;" target="feedback-engine">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1590" y="705" />
+              <mxPoint x="1390" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="feedback-engine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=classic;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="fb-std">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="820" />
+              <mxPoint x="340" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="feedback-engine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#A855F7;strokeWidth=2;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="fb-audio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="feedback-engine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EC4899;strokeWidth=2;endArrow=classic;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="fb-visual">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1170" y="820" />
+              <mxPoint x="1560" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="fb-std" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;fontColor=#1E293B;labelBackgroundColor=#FFFFFF;" target="be-api" value="Session">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="fb-audio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="be-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="fb-visual" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" target="be-auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="fb-visual" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3B82F6;strokeWidth=1.5;dashed=1;endArrow=classic;fontSize=18;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="user-patient" value="Feedback ส่งกลับผู้ใช้">
+          <mxGeometry relative="1" x="-0.0009" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1830" y="975" />
+              <mxPoint x="1830" y="230" />
+              <mxPoint x="1550" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="be-db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6366F1;strokeWidth=1.5;dashed=1;endArrow=classic;fontSize=18;fontColor=#312E81;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="mode3" value="Analytics">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1890" y="1210" />
+              <mxPoint x="1890" y="435" />
+              <mxPoint x="1750" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
