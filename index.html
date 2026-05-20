@@ -1152,10 +1152,9 @@ function ModeCard({ iconName, title, hint, active = false, accent = MT.brand, on
 // ─── 1) Mode picker screen (home) ───
 function ScreenModes({ current, setCurrent }) {
   const { t } = useT();
+  // Mobile App is Patient-only — Therapist modes (Setup, Dashboard) live on Web.
   const modes = [
-  { key: 'setup', icon: 'set', accent: MT.brand },
   { key: 'practice', icon: 'body', accent: MT.good },
-  { key: 'dash', icon: 'chart', accent: MT.warn },
   { key: 'audio', icon: 'speak', accent: '#9B7A62' },
   { key: 'visual', icon: 'eye', accent: '#B86C5A' }];
 
@@ -1627,13 +1626,6 @@ function ScreenVisual() {
           <div style={{ fontSize: 22, fontWeight: 600, color: MT.ink, marginTop: 2, letterSpacing: -0.3 }}>
             {accuracy > 85 ? t.great : t.higher}
           </div>
-        </div>
-        {/* Haptic pulse indicator */}
-        <div style={{
-          padding: '6px 10px', background: 'rgba(148,180,220,0.08)', borderRadius: 999,
-          display: 'flex', alignItems: 'center', gap: 6, color: MT.ink2, fontSize: 11
-        }}>
-          <Ico name="vibrate" size={14} /> haptic
         </div>
       </div>
 
@@ -2852,7 +2844,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 function App() {
   const [tweaks, setTweaks] = React.useState(TWEAK_DEFAULTS);
   const [panelOpen, setPanelOpen] = React.useState(false);
-  const [mode, setMode] = React.useState('setup');
+  const [mode, setMode] = React.useState('practice');
 
   React.useEffect(() => {
     const onMsg = (e) => {
@@ -2875,42 +2867,37 @@ function App() {
     <LangCtx.Provider value={tweaks.lang}>
       <PxKeyframes />
       <DesignCanvas>
-        <DCSection id="mobile" title="Mobile — Patient app" subtitle="5 modes · bilingual · on-device AI">
+        <DCSection id="mobile" title="Mobile — Patient app" subtitle="Patient-only · 3 modes · bilingual · on-device AI">
           <DCArtboard id="m1" label="01 · Mode picker (home)" width={412} height={866}>
             <div data-screen-label="01 Mode picker" style={{ width: '100%', height: '100%' }}>
               <Phone><ScreenModes current={mode} setCurrent={setMode} /></Phone>
             </div>
           </DCArtboard>
-          <DCArtboard id="m2" label="02 · Therapist Setup" width={412} height={866}>
-            <div data-screen-label="02 Therapist Setup" style={{ width: '100%', height: '100%' }}>
-              <Phone><ScreenSetup /></Phone>
-            </div>
-          </DCArtboard>
-          <DCArtboard id="m3" label="03 · Patient Practice · live session (hero)" width={412} height={866}>
-            <div data-screen-label="03 Patient Practice" style={{ width: '100%', height: '100%' }}>
+          <DCArtboard id="m2" label="02 · Patient Practice · live session (hero)" width={412} height={866}>
+            <div data-screen-label="02 Patient Practice" style={{ width: '100%', height: '100%' }}>
               <Phone><ScreenPractice /></Phone>
             </div>
           </DCArtboard>
-          <DCArtboard id="m4" label="04 · Audio-Only mode" width={412} height={866}>
-            <div data-screen-label="04 Audio Only" style={{ width: '100%', height: '100%' }}>
+          <DCArtboard id="m3" label="03 · Audio-Only mode" width={412} height={866}>
+            <div data-screen-label="03 Audio Only" style={{ width: '100%', height: '100%' }}>
               <Phone><ScreenAudio /></Phone>
             </div>
           </DCArtboard>
-          <DCArtboard id="m5" label="05 · Visual-Only mode" width={412} height={866}>
-            <div data-screen-label="05 Visual Only" style={{ width: '100%', height: '100%' }}>
+          <DCArtboard id="m4" label="04 · Visual-Only mode" width={412} height={866}>
+            <div data-screen-label="04 Visual Only" style={{ width: '100%', height: '100%' }}>
               <Phone><ScreenVisual /></Phone>
             </div>
           </DCArtboard>
         </DCSection>
 
-        <DCSection id="web" title="Web — Therapist dashboard" subtitle="Async review · session playback · BlazePose reference capture">
-          <DCArtboard id="w1" label="06 · Dashboard · async patient review" width={1280} height={1600}>
-            <div data-screen-label="06 Therapist Dashboard" style={{ width: '100%', height: '100%' }}>
+        <DCSection id="web" title="Web — Therapist app" subtitle="Therapist-only · 2 modes · async review · BlazePose reference capture">
+          <DCArtboard id="w1" label="05 · Therapist Dashboard · async patient review" width={1280} height={1600}>
+            <div data-screen-label="05 Therapist Dashboard" style={{ width: '100%', height: '100%' }}>
               <BrowserChrome height={1600}><ScreenDashboard /></BrowserChrome>
             </div>
           </DCArtboard>
-          <DCArtboard id="w2" label="07 · Therapist Setup · capture & validate reference" width={1280} height={1180}>
-            <div data-screen-label="07 Therapist Setup" style={{ width: '100%', height: '100%' }}>
+          <DCArtboard id="w2" label="06 · Therapist Setup · capture & validate reference" width={1280} height={1180}>
+            <div data-screen-label="06 Therapist Setup" style={{ width: '100%', height: '100%' }}>
               <BrowserChrome height={1180} url="physioai.app/clinic/capture"><ScreenTherapistSetup /></BrowserChrome>
             </div>
           </DCArtboard>
